@@ -2,12 +2,12 @@
   flex: 1 1 auto;
 }
 
-.menu-item {
- a{
+.menu-item a{
   text-decoration: none;
   margin: 10px;
-  }
+  padding: .5rem;
 }
+
 
 a:hover{
   color: rgb(82, 82, 82);

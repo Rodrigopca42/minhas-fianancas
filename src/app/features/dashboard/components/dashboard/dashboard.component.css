@@ -1,6 +1,7 @@
 .flex {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+
   justify-content: space-evenly;
 }
 
@@ -29,14 +30,19 @@
 }
 
 .card-item {
-  margin-top: 50px;
-  position: relative;
+  display: flex;
+  margin-top: 25px;
   top: -130px;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-item {
-  width: 100%;
-  padding: 1.2rem;
+  width: 60%;
+  padding: .5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+
 }
 
 .center {

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'minhas-financas1';
+
+  menu : any [] =[
+    {descricao:'Dashbaord', rota: 'dashboard'},
+    {descricao:'Categorias', rota: 'categorias'},
+    //{descricao:'Entradas', rota: 'entradas'}
+  ];
+
 }

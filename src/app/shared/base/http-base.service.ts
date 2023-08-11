@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpBaseService {
 
-  public readonly httpClient! : HttpClient;
+  private readonly httpClient! : HttpClient;
 
   private apiBase = 'http://localhost:3000/';
 

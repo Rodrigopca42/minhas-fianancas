@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './shared/material/material.module';
 import { ToolbarComponent } from './commom/componets/toolbar/toolbar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ToolbarComponent } from './commom/componets/toolbar/toolbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

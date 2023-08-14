@@ -23,9 +23,11 @@ export class CategoriaService extends HttpBaseService{
    }
 
    alterarCategoria(payload: Categoria){
-    return this.httpPut(`${this.endpoint}/${payload.id}`, payload)
+    return this.httpPut(`${this.endpoint}/${payload.id}`, payload);
    }
 
+   excluirCategoria(id: number): Observable<any>{
+    return this.httpDelete(`${this.endpoint}/${id}`);
+   }
 
 }
- 

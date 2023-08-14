@@ -17,13 +17,13 @@
     },
     {
       "id": 4,
-      "nome": "Salário",
+      "nome": "Salário mensal",
       "descricao": "Recebimento de Salário"
     },
     {
-      "nome": "Freelas",
-      "descricao": "Recebimento de serviço",
-      "id": 5
+      "id": 5,
+      "nome": "Freelancer",
+      "descricao": "Recebimento de serviço"
     },
     {
       "nome": "Férias",

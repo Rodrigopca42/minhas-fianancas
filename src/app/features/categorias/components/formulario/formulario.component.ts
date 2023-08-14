@@ -44,4 +44,25 @@ export class FormularioComponent implements OnInit{
     )
   }
 
+  atualizarCategoria(){
+
+    if(this.formCategoria.touched && this.formCategoria.dirty){
+      const payload = {
+        id: this.categoria.id,
+        nome: this.formCategoria.controls['nome'].value,
+        descricao: this.formCategoria.controls['descricao'].value,
+      }
+
+
+      this.categoriaService.alterarCategoria(payload)
+      .subscribe(reposta => {
+        //retornar a tela anterior
+
+        this.router.navigate(['categorias']);
+
+      })
+    }
+
+  }
+
 }

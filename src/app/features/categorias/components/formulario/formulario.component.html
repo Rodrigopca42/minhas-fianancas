@@ -13,6 +13,9 @@
       <textarea matInput placeholder="Digite as informações importantes" formControlName="descricao"></textarea>
     </mat-form-field>
 
+    <button mat-raised-button color="primary" [disabled]="!formCategoria.valid" (click)="atualizarCategoria()">Atualizar</button>
+
   </form>
+
 
 </div>

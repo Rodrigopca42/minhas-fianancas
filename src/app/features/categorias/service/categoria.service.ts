@@ -30,4 +30,8 @@ export class CategoriaService extends HttpBaseService{
     return this.httpDelete(`${this.endpoint}/${id}`);
    }
 
+   criarCategoria(payload: Categoria){
+    return this.httpPost(`${this.endpoint}`, payload);
+   }
+
 }

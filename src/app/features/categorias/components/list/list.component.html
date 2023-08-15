@@ -1,5 +1,8 @@
 <div class="container">
+  <button mat-raised-button color="accent" (click)="novaCategoria()">Adicionar nova saída</button>
+
   <table class="flex" mat-table [dataSource]="dataSource">
+
 
     <!-- Nome Column -->
     <ng-container matColumnDef="nome">

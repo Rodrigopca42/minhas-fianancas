@@ -14,6 +14,8 @@ export class FormularioComponent implements OnInit{
   categoria!: Categoria;
   id: string = '';
   formCategoria!: FormGroup;
+  rota: string = '';
+  eUmNovoFormulario: boolean = false;
 
   constructor(
     private categoriaService: CategoriaService,
@@ -25,14 +27,25 @@ export class FormularioComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.id = this.activatedRoute.snapshot.url[1].path;
+    this.rota = this.activatedRoute.snapshot.url[0].path;
     this.criarFormulario();
+
+    if(this.rota ==='editar'){
+      this.id = this.activatedRoute.snapshot.url[1].path;
+      this.buscarCategoriaPorId()
+
+    }else{
+      this.eUmNovoFormulario = true;
+    }
+  }
+
+  buscarCategoriaPorId(){
     this.categoriaService.getCategoriasPeloId(parseInt(this.id))
     .subscribe((categoria: Categoria) => {
       this.categoria = categoria;
       this.formCategoria.controls['nome'].setValue(categoria.nome);
       this.formCategoria.controls['descricao'].setValue(categoria.descricao);
-    })
+    });
   }
 
   criarFormulario(){
@@ -47,22 +60,41 @@ export class FormularioComponent implements OnInit{
   atualizarCategoria(){
 
     if(this.formCategoria.touched && this.formCategoria.dirty){
-      const payload = {
-        id: this.categoria.id,
-        nome: this.formCategoria.controls['nome'].value,
-        descricao: this.formCategoria.controls['descricao'].value,
+        const payload: Categoria = {
+          nome: this.formCategoria.controls['nome'].value,
+          descricao: this.formCategoria.controls['descricao'].value,
+      }
+
+      if(this.eUmNovoFormulario){
+        this.criarCategoria(payload)
+      }else{
+        payload.id = this.categoria.id,
+        this.editarCategoria(payload)
       }
 
 
-      this.categoriaService.alterarCategoria(payload)
+    }
+
+  }
+
+  editarCategoria(payload: Categoria){
+    this.categoriaService.alterarCategoria(payload)
       .subscribe(reposta => {
         //retornar a tela anterior
 
         this.router.navigate(['categorias']);
 
       })
-    }
+  }
 
+  criarCategoria(payload: Categoria){
+    this.categoriaService.criarCategoria(payload)
+      .subscribe(reposta => {
+        //retornar a tela anterior
+
+        this.router.navigate(['categorias']);
+
+      })
   }
 
 }

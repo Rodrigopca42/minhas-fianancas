@@ -1,9 +1,9 @@
 {
   "categorias": [
     {
-      "id": 1,
       "nome": "Moradia",
-      "descricao": "Pagamentos de Contas da Casa"
+      "descricao": "Pagamentos de Contas da Casa",
+      "id": 1
     },
     {
       "id": 2,
@@ -19,6 +19,11 @@
       "id": 5,
       "nome": "Freelancer",
       "descricao": "Recebimento de serviço"
+    },
+    {
+      "nome": "Workana",
+      "descricao": "trabalho feito pela plataforma",
+      "id": 6
     }
   ],
   "entradas": [

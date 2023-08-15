@@ -134,6 +134,15 @@
       "data": "28/04/2023",
       "valor": 30,
       "tipo": "despesa"
+    },
+    {
+      "id": 56,
+      "nome": "Freelancer",
+      "categoriaId": 5,
+      "pago": true,
+      "data": "28/04/2023",
+      "valor": 6250.25,
+      "tipo": "receita"
     }
   ]
 }

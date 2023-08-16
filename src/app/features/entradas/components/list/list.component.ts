@@ -55,7 +55,7 @@ export class ListComponent {
   }
 
   novaEntrada(){
-    this.router.navigate(['entradas', 'nova-entradas'])
+    this.router.navigate(['entradas', 'novo'])
   }
 
 }

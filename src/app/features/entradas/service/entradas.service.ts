@@ -16,4 +16,8 @@ getEntradas(): Observable<any>{
 return this.httpGet(`${this.endpoint}`);
 }
 
+excluirEntradas(id: number): Observable<any>{
+  return this.httpDelete(`${this.endpoint}/${id}`);
+}
+
 }

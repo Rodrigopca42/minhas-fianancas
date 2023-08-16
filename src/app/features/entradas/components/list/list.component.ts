@@ -48,10 +48,10 @@ export class ListComponent {
   }
 
   excluir(id:number){
-    // this.entradasService.excluirCategoria(id)
-    // .subscribe(resposta =>{
-    //   this.buscarCategorias();
-    // })
+    this.entradasService.excluirEntradas(id)
+    .subscribe(resposta =>{
+      this.buscarEntradas();
+    })
   }
 
   novaEntrada(){

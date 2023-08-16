@@ -12,3 +12,13 @@ button{
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.verde{
+  color: green;
+  font-weight: 700;
+}
+
+.vermelho{
+  color: red;
+  font-weight: 700;
+}

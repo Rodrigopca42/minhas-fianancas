@@ -1,61 +1,68 @@
-.flex {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding: 3rem;
+}
+
+.header{
+  max-width: 800px;
   display: flex;
   flex-wrap: wrap;
-
-  justify-content: space-evenly;
-}
-
-.header {
-  height: 300px;
-}
-
-.title {
-  position: relative;
-  font-size: 3rem;
-  top: 24px;
   align-items: center;
-  justify-content: center;
-  display: flex;
+  justify-content:space-around;
+  margin: 0 auto;
 }
 
-.mat-mdc-card {
-  width: 400px;
-  height: 120px;
+.header > .filtro{
+  flex: 1 1 400px;
+  }
+
+.filtro{
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-
-.input-item {
-  width: 400px;
-  margin-top: 90px;
-
-}
-
-.card-item {
-  display: flex;
-  margin-top: 25px;
-  top: -130px;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-item {
-  width: 60%;
+.input{
+  width: 22rem;
   padding: .5rem;
-  margin: 0 auto;
-  margin-top: 1rem;
-
 }
 
-.center {
+.card{
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-around;
   margin: 0 auto;
 }
 
-.conteudo{
+.card>.flex{
+  flex: 1 1 400px;
+}
+
+.flex{
+  max-width: 18rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.center{
+  width: 10rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  font-weight: 500;
   font-size: 1.5rem;
-}
-
-.titulo {
-  font-size: 1.6rem;
-  padding: 20px;
 }
 
 .receita {

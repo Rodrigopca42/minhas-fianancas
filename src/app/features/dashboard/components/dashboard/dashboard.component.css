@@ -30,8 +30,14 @@
   margin-bottom: 3rem;
 }
 .input{
-  width: 22rem;
+  width: 18rem;
   padding: .5rem;
+  margin: 2rem;
+}
+
+button{
+  width: 100%;
+  margin: 2rem;
 }
 
 .card{

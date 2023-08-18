@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { DashboardService } from '../../service/dashboard.service';
-import { Entrada } from 'src/app/features/models/entrada.model';
+import { Entradas } from 'src/app/features/entradas/models/entradas.models';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -47,7 +48,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getReceitas(){
-this.entradas.forEach((entrada: Entrada)=>{
+this.entradas.forEach((entrada: Entradas)=>{
 
   if(entrada.tipo === "receita"){
     this.receita += parseInt(entrada.valor);
@@ -56,7 +57,7 @@ this.entradas.forEach((entrada: Entrada)=>{
   }
 
   getDespesas(){
-    this.entradas.forEach((entrada: Entrada)=>{
+    this.entradas.forEach((entrada: Entradas)=>{
 
       if(entrada.tipo === "despesa"){
         this.despesa += parseInt(entrada.valor);

@@ -7,6 +7,10 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatusPipe } from './pipes/status.pipe';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+
+
+
 
 
 
@@ -22,6 +26,11 @@ import { StatusPipe } from './pipes/status.pipe';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
+  ],
+  providers: [
+    provideNgxMask()
   ]
 })
 export class EntradasModule { }

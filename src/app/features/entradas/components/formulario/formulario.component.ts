@@ -33,6 +33,8 @@ export class FormularioComponent implements OnInit{
   rota: string = '';
   estacriando: boolean = false;
 
+  categorias$ =this.categoriaService.getCategorias();
+
   constructor(
     private readonly categoriaService: CategoriaService,
     private entradaService: EntradasService,
@@ -44,7 +46,6 @@ export class FormularioComponent implements OnInit{
 
   ngOnInit(): void {
     this.criarFormulario();
-    this.buscarCategorias();
 
     this.rota = this.activatedRoute.snapshot.url[0].path;
     if(this.rota === 'editar'){
@@ -70,14 +71,9 @@ export class FormularioComponent implements OnInit{
       this.formEntrada.controls['tipo'].setValue(this.entrada.tipo);
       this.formEntrada.controls['data'].setValue(new Date(+data[2], +data[1], +data[0] ));
     });
+
   }
 
-  buscarCategorias(){
-    this.categoriaService.getCategorias()
-    .subscribe((categorias: Categoria[])=>{
-      this.categorias = categorias;
-    });
-  }
 
   criarFormulario(){
     this.formEntrada = this.formBuilder.group(
@@ -137,5 +133,6 @@ export class FormularioComponent implements OnInit{
       this.router.navigate(['entradas']);
       })
   }
+
 
 }

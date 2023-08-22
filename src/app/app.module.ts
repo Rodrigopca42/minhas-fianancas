@@ -9,6 +9,7 @@ import { MaterialModule } from './shared/material/material.module';
 import { ToolbarComponent } from './commom/componets/toolbar/toolbar.component';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { AuthGuard } from './commom/auth.guard';
 registerLocaleData(ptBr)
 
 
@@ -27,6 +28,7 @@ registerLocaleData(ptBr)
 
   ],
   providers: [
+    AuthGuard,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]

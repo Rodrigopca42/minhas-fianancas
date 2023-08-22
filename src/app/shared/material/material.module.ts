@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -29,7 +29,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-
+    MatSnackBarModule
   ],
   exports: [
     MatCardModule,
@@ -42,7 +42,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
